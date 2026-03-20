@@ -142,6 +142,14 @@ For complete installation instructions, see the **[Getting Started Guide](./docs
 - Installation (supports AWS, Azure, Hetzner HCloud, Hetzner Bare Metal, and Local K3D)
 - Post-configuration and basic operations
 
+If you want a single command that bootstraps the cluster and then runs the basic validation checks, use:
+
+```bash
+./bin/deploy.sh
+```
+
+The script wraps `kubeaid-cli cluster bootstrap`, verifies the generated kubeconfig, and checks cluster, node, and ArgoCD application health.
+
 For hosting-specific reference and operations guides, see the [documentation](./docs/README.md).
 
 ## Support

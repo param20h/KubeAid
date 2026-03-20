@@ -134,6 +134,14 @@ Run the bootstrap command:
 kubeaid-cli cluster bootstrap
 ```
 
+If you prefer a repo-local helper that also performs the most common post-bootstrap checks, run:
+
+```bash
+./bin/deploy.sh
+```
+
+This helper validates prerequisites, runs `kubeaid-cli cluster bootstrap`, exports the generated kubeconfig, and then checks cluster connectivity, nodes, and ArgoCD applications.
+
 ### What Happens During Bootstrap
 
 The bootstrap process will:
